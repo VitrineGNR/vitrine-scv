@@ -1,0 +1,74 @@
+# VitrineSCV - Requirements para Compatibilidade Cross-Platform
+# Testado em: iOS, Android, Windows, Mac, Linux
+
+# Core Framework - Versão testada e estável para mobile
+streamlit==1.36.0
+
+# Processamento de Dados
+pandas==2.2.0
+numpy==1.26.0
+
+# Visualizações Interativas (compatível com touch)
+plotly==5.18.0
+altair==5.2.0
+
+# Componentes para Detecção de Dispositivo e JavaScript
+streamlit-js-eval==0.1.7
+
+# Processamento de Imagens (otimizado para mobile)
+pillow==10.4.0
+opencv-python-headless==4.8.1.78
+
+# Geração de PDFs (mobile-friendly)
+fpdf2==2.7.6
+reportlab==4.0.4
+
+# Excel/CSV Processing
+openpyxl==3.1.2
+xlsxwriter==3.1.9
+
+# Autenticação e Segurança
+streamlit-authenticator==0.2.3
+bcrypt==4.1.2
+
+# QR Codes para mobile
+qrcode==7.4.2
+
+# Configurações e Variáveis de Ambiente
+python-dotenv==1.0.0
+
+# Validação de Dados
+pydantic==2.5.0
+
+# HTTP Requests
+requests==2.31.0
+
+# Data/Time utilities
+python-dateutil==2.8.2
+
+# Formatação de números para Brasil
+babel==2.14.0
+
+# Cache e Performance
+streamlit-elements==0.1.0
+extra-streamlit-components==0.1.60
+
+# PWA Support (Progressive Web App)
+# Essencial para comportamento app-like em mobile
+streamlit-pwa==0.1.0
+
+# Layout responsivo avançado
+streamlit-lottie==0.0.5
+streamlit-option-menu==0.3.6
+
+# Componentes de Interface Mobile-Friendly
+streamlit-aggrid==0.3.4.post3
+streamlit-card==0.0.61
+streamlit-toggle-switch==1.0.2
+
+# Performance e Monitoramento
+memory-profiler==0.61.0
+psutil==5.9.6
+
+# Desenvolvimento e Debug
+streamlit-profiler==0.2.0

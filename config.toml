@@ -1,0 +1,51 @@
+# Configuração Streamlit para Compatibilidade Cross-Platform
+
+[server]
+# Configurações básicas do servidor
+port = 8501
+address = "0.0.0.0"
+
+# Otimizações para dispositivos móveis
+maxUploadSize = 50
+maxMessageSize = 50
+
+# Segurança para acesso externo
+enableCORS = false
+enableXsrfProtection = false
+headless = true
+
+# Performance para conexões móveis
+runOnSave = false
+allowRunOnSave = false
+
+[browser]
+# Desabilita coleta de estatísticas para melhor performance
+gatherUsageStats = false
+
+# Configurações para mobile browsers
+serverAddress = "0.0.0.0"
+serverPort = 8501
+
+[client]
+# Configurações do cliente otimizadas para mobile
+toolbarMode = "minimal"
+showErrorDetails = false
+showWarningDetails = false
+
+[theme]
+# Tema otimizado para mobile (cores de alto contraste)
+primaryColor = "#FF6B6B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"
+
+[deprecation]
+# Desabilita avisos para melhor UX
+showPyplotGlobalUse = false
+showFileUploaderEncoding = false
+
+[logger]
+# Logs otimizados para produção
+level = "error"
+messageFormat = "%(asctime)s %(message)s"
