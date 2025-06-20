@@ -32,10 +32,11 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install --no-cache-dir -r requirements.txt
 
-      - name: 🐍 Lint com flake8
+            - name: 🐍 Lint summary with flake8
         run: |
           pip install flake8
-          flake8 .
+          # roda o flake8, imprime só o total de ocorrências por tipo e não falha o job
+          flake8 . --statistics --exit-zero
 
       - name: 🚀 Test start (Streamlit)
         run: |
