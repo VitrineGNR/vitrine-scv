@@ -1,0 +1,43 @@
+name: 🕵️‍♂️ Valida Repositório
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v3
+
+      - name: 📋 Verifica arquivos obrigatórios
+        run: |
+          required=(Dockerfile requirements.txt app.py)
+          missing=0
+          for f in "${required[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "❌ Arquivo faltando: $f"
+              missing=1
+            else
+              echo "✅ Encontrado: $f"
+            fi
+          done
+          if [ $missing -eq 1 ]; then
+            exit 1
+          fi
+
+      - name: 🔧 Instala dependências
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install --no-cache-dir -r requirements.txt
+
+      - name: 🐍 Lint com flake8
+        run: |
+          pip install flake8
+          flake8 .
+
+      - name: 🚀 Test start (Streamlit)
+        run: |
+          pip install streamlit
+          streamlit --version
